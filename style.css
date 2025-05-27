@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  color: #333;
+  background-color: #fff;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: rgba(0,0,0,0.7);
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  color: #fff;
+}
+
+nav .logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #fca311;
+}
+
+.hero {
+  height: 100vh;
+  background: url('https://images.unsplash.com/photo-1596495578063-4cbdc298e9d3') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+  position: relative;
+  padding-top: 4rem;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  animation: slideIn 1s ease-out forwards;
+}
+
+.hero-text p {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  animation: fadeIn 2s ease-in forwards;
+}
+
+.btn {
+  background: #fca311;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #e07a00;
+}
+
+.section {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: #f8f8f8;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.testimonials {
+  background: #f0f0f0;
+  position: relative;
+}
+
+.carousel {
+  max-width: 600px;
+  margin: 2rem auto;
+  position: relative;
+}
+
+.testimonial {
+  display: none;
+  font-style: italic;
+  font-size: 1.2rem;
+}
+
+.testimonial.active {
+  display: block;
+}
+
+.footer {
+  background: #222;
+  color: #eee;
+  padding: 2rem;
+  text-align: center;
+}
+
+.footer a {
+  color: #fca311;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+@keyframes slideIn {
+  0% { transform: translateY(-50px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
